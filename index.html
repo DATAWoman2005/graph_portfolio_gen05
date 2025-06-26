@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,79 +8,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg-dark:#0b0e1a;
-      --bg-darker:#05060d;
-      --accent:#f1c40f;
-      --text-light:#ffffff;
-      --text-muted:#bbbbbb;
+    :root {
+      --bg-dark: #0b0e1a;
+      --bg-darker: #05060d;
+      --accent: #f1c40f;
+      --text-light: #ffffff;
+      --text-muted: #bbbbbb;
     }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{
-      font-family:'Poppins',sans-serif;
-      background:var(--bg-dark);
-      color:var(--text-light);
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg-dark); color: var(--text-light); }
     /* NAVBAR */
-    .navbar{
-      position:fixed;top:0;left:0;width:100%;
-      display:flex;justify-content:space-between;align-items:center;
-      padding:1.25rem 3rem;z-index:1000;
-      background:rgba(5,6,13,.7);backdrop-filter:blur(6px);
-    }
-    .brand{font-weight:700;font-size:1.25rem;color:var(--text-light);text-decoration:none;}
-    .nav-links{display:flex;gap:2rem;}
-    .nav-links a{color:var(--text-light);text-decoration:none;font-weight:500;font-size:.9rem;}
-    .nav-links a:hover{color:var(--accent);}
-
+    .navbar { position: fixed; top: 0; width: 100%; padding: 1.25rem 3rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(5,6,13,.7); backdrop-filter: blur(6px); }
+    .brand { font-weight: 700; font-size: 1.25rem; color: var(--text-light); text-decoration: none; letter-spacing: .5px; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--text-light); text-decoration: none; font-weight: 500; font-size: .9rem; }
+    .nav-links a:hover { color: var(--accent); }
     /* HERO */
-    .hero{
-      min-height:100vh;
-      display:flex;           /* key: side‑by‑side */
-      align-items:center;
-      justify-content:space-between;
-      padding:0 8% 2rem;
-      background:linear-gradient(135deg,var(--bg-dark) 40%,var(--bg-darker) 100%);
-    }
-    .hero-content{max-width:600px;}
-    .hero h1{
-      font-family:'Playfair Display',serif;
-      font-size:clamp(2.5rem,5vw,3.5rem);
-      line-height:1.15;font-weight:700;
-    }
-    .hero h1 span{font-style:italic;color:var(--accent);}
-    .hero p{margin:1.25rem 0 2rem;font-size:1.05rem;color:var(--text-muted);}   
-    .btn{
-      display:inline-block;padding:.85rem 1.8rem;margin-right:.75rem;
-      border:2px solid var(--accent);border-radius:2px;
-      text-decoration:none;color:var(--accent);font-weight:600;
-      transition:background .3s,color .3s;
-    }
-    .btn:hover{background:var(--accent);color:var(--bg-dark);}    
-
+    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 0 8% 2rem; background: linear-gradient(135deg, var(--bg-dark) 40%, var(--bg-darker) 100%); }
+    .hero-content { max-width: 600px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.15; font-weight: 700; }
+    .hero h1 span { font-style: italic; color: var(--accent); }
+    .hero p { margin: 1.25rem 0 2rem; font-size: 1.05rem; color: var(--text-muted); }
+    .btn { display: inline-block; padding: .85rem 1.8rem; border: 2px solid var(--accent); text-decoration: none; color: var(--accent); font-weight: 600; border-radius: 2px; transition: background .3s, color .3s; margin-right: .75rem; }
+    .btn:hover { background: var(--accent); color: var(--bg-dark); }
     /* PHOTO */
-    .photo-wrapper{
-      position:relative;width:340px;height:340px;flex-shrink:0;
-      margin-left:2rem;                 /* space from text */
-    }
-    .photo-wrapper img{
-      width:100%;height:100%;object-fit:cover;border-radius:50%;
-      border:2px solid var(--bg-dark);position:relative;z-index:2;
-    }
-    .photo-wrapper::before{
-      content:"";position:absolute;width:120%;height:120%;top:10%;left:-20%;
-      background:var(--bg-darker);
-      border-radius:60% 40% 55% 45%/60% 40% 60% 40%;transform:rotate(-8deg);z-index:1;
-    }
-
-    /* MAIN & SECTIONS (only minimal demo) */
-    main{padding:4rem 8% 3rem;}
-
-    /* MOBILE */
-    @media(max-width:870px){
-      .hero{flex-direction:column;text-align:center;padding-top:7rem;}
-      .photo-wrapper{margin:2.5rem 0 0;}
+    .photo-wrapper { position: relative; width: 340px; height: 340px; flex-shrink: 0; }
+    .photo-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid var(--bg-dark); position: relative; z-index: 2; }
+    .photo-wrapper::before { content: ""; position: absolute; width: 120%; height: 120%; top: 10%; left: -20%; background: var(--bg-darker); border-radius: 60% 40% 55% 45%/60% 40% 60% 40%; transform: rotate(-8deg); z-index: 1; }
+    /* MAIN */
+    main { padding: 4rem 8% 3rem; }
+    section { margin-bottom: 4rem; }
+    section h2 { font-size: 1.9rem; color: var(--accent); margin-bottom: 1rem; }
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .5rem 1rem; }
+    .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem; }
+    .module { background: var(--bg-darker); padding: 1rem; border-left: 4px solid var(--accent); border-radius: 4px; }
+    .module strong { color: var(--text-light); }
+    .module p { color: var(--text-muted); font-size: .9rem; }
+    footer { background: var(--bg-darker); color: var(--text-muted); text-align: center; padding: 1.5rem; font-size: .85rem; }
+    @media (max-width: 870px) {
+      .hero { flex-direction: column; text-align: center; padding-top: 7rem; }
+      .photo-wrapper { margin-top: 2.5rem; }
     }
   </style>
 </head>
@@ -90,34 +58,108 @@
     <a class="brand" href="#hero">Adijat&nbsp;Adenaike</a>
     <div class="nav-links">
       <a href="#about-me">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#about-course">Course</a>
+      <a href="#submissions">Submissions</a> 
+      <a href="#consultation">Contact</a>
       <a href="https://linkedin.com/in/aadenaike-1b638a40" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </nav>
-
   <!-- HERO -->
   <header id="hero" class="hero">
-    <!-- LEFT: heading & buttons -->
     <div class="hero-content">
-      <h1>Data&nbsp;Professional.<br/>Generative&nbsp;AI&nbsp;<span>Consultant.</span></h1>
+      <h1>Data&nbsp;Professional.<br>Generative&nbsp;AI&nbsp;<span>Consultant.</span></h1>
       <p>On a mission to empower health &amp; social‑care innovators with practical AI tools. Blending data science, compassion, and cutting‑edge technology to create equitable, human‑centred solutions.</p>
-      <div class="cta">
-        <a href="#about-me" class="btn">Explore Portfolio ↓</a>
-        <a href="https://drive.google.com/uc?export=download&id=1o9doYNdpR2azV3USl9EPMBy-dU6meyui" class="btn" target="_blank" rel="noopener noreferrer">Download&nbsp;Resume&nbsp;(PDF)</a>
-      </div>
-    </div>
+<div class="cta">
+  <!-- Explore Portfolio button -->
+  <a href="#about-me" class="btn">Explore Portfolio ↓</a>
 
-    <!-- RIGHT: photo -->
-    <div class="photo-wrapper">
-      <img src="https://github.com/DATAWoman2005/graph_portfolio_gen05/blob/main/headshot.jpeg?raw=true" alt="Adijat A. Adenaike headshot" />
-    </div>
+  <!-- Download Resume button -->
+  <a
+    href="https://drive.google.com/uc?export=download&id=1o9doYNdpR2azV3USl9EPMBy-dU6meyui"
+    class="btn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Download&nbsp;Resume&nbsp;(PDF)
+ ↓ </a>
+<div class="photo-wrapper"><img src="https://github.com/DATAWoman2005/graph_portfolio_gen05/blob/main/headshot.jpeg?raw=true" alt="Adijat A. Adenaike headshot"></div>
   </header>
-
-  <!-- MAIN (placeholder) -->
-  <main id="about-me">
-    <h2>About section…</h2>
-    <p>Content continues here.</p>
+  <!-- MAIN -->
+  <main>
+    <!-- ABOUT ME -->
+    <section id="about-me">
+      <h2>About&nbsp;Me</h2>
+      <p>I am an analytical, purpose‑driven data professional with a multidisciplinary background in data science, healthcare, and social work. Currently pursuing an <strong>MSc in Data Science for Health&nbsp;&amp;&nbsp;Social Care</strong> at the University of Edinburgh, I translate complex datasets into actionable insights using Python, R, SQL and visualization platforms like Power&nbsp;BI. My mission: leverage data and generative AI to drive equitable, human‑centred solutions.</p>
+      <h3 style="margin:1.5rem 0 .6rem;color:var(--text-light)">Core Competencies</h3>
+      <div class="skills">
+        <span>Data Cleaning &amp; Analysis</span><span>Visualization &amp; Dashboarding</span><span>Predictive Analytics</span><span>Database Design</span><span>Research Methods</span><span>Ethical Data Use</span>
+      </div>
+    </section>
+    <!-- ABOUT COURSE -->
+    <section id="about-course">
+      <h2>About&nbsp;the Course</h2>
+      <p><strong>Generative&nbsp;AI for Work &amp; Research Productivity</strong> is an intensive eight‑week online programme that teaches no‑code AI tools to automate data, content, and knowledge workflows. Participants learn to:</p>
+      <ul style="margin:1rem 0 2rem 1.25rem;list-style:disc">
+        <li>Automate documents, spreadsheets, and data tasks</li>
+        <li>Streamline literature reviews &amp; knowledge management</li>
+        <li>Build custom chatbots for projects or teams</li>
+        <li>Create professional visuals &amp; presentations</li>
+        <li>Design and present a hands‑on capstone project</li>
+      </ul>
+      <h3 style="margin-bottom:.75rem;color:var(--text-light)">Course Modules</h3>
+      <div class="course-grid">
+        <div class="module"><strong>Documents, Presentations &amp; Websites</strong><p>LLM fundamentals • Content generation • No‑code sites & decks</p></div>
+        <div class="module"><strong>Automated Data Analysis</strong><p>ChatGPT Code Interpreter • Julius • Windsurf dashboards</p></div>
+        <div class="module"><strong>GenAI for Research &amp; Text Analysis</strong><p>Elicit • Literev • Summarization • Text classification</p></div>
+        <div class="module"><strong>Custom GPTs &amp; Chatbots</strong><p>RAG systems • Botpress workflows • API integration</p></div>
+        <div class="module"><strong>AI Workflows &amp; Task Automation</strong><p>Lindy automations • Make.com • Gmail/Sheets orchestration</p></div>
+        <div class="module"><strong>GenAI for Communication &amp; Outreach</strong><p>Ideogram images • InVideo AI • Content scheduling</p></div>
+        <div class="module"><strong>Capstone Project &amp; Showcase</strong><p>Solution design • Tool integration • Peer presentations</p></div>
+      </div>
+    </section>
+    <!-- WEEKLY SUBMISSIONS -->
+    <section id="submissions">
+      <h2>My Weekly Submissions</h2>
+      <p>Links will appear here as each week’s work is completed.</p>
+      <ol style="margin-top:1rem;padding-left:1.25rem">
+        <li>Week 1 – <em>This website!</em></li>
+        <li>Week 2 – <em>Automated Data Analysis</em></li>
+        <li>Week 3 – <em>Market Research and Text Analysis with LLM&nbsp;API’s</em>&nbsp;–&nbsp;<a
+    href="https://drive.google.com/file/d/1JycIZdB0o8IzodwSE_7u7EOaDcjmEdP-/view?usp=sharing"
+    target="_blank"
+    rel="noopener"
+    style="
+      display:inline-block;
+      padding:0.6rem 1rem;
+      background:#05060d; 
+      color:#f1c40f;                                                                                           
+      border:2px solid #f1c40f; 
+      border-radius:0.35rem;
+      font-weight:600;
+      text-decoration:none;
+      line-height:1;
+    "
+  >
+    Read&nbsp;report
+  </a>
+</li>
+        <li>Week 4 – <em>This website's Chatbot with Botpress</em></li>
+        <li>Week 5 – <em>Task automation with Make.com</em></li>
+        <li>Week 6 – <em>Coming Soon</em></li>
+      </ol>
+    </section> 
+    <!-- CONSULTATION FORM SECTION -->
+<section id="consultation">
+  <h2>Contact for Consultation</h2>
+  <p>If you'd like to schedule a consultation or reach out for collaboration, please use the button below to access my secure form. I look forward to connecting with you!</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSds7T7AILA6pdUwhLASye0u_qWPq44Q3M-vdwuqw79Rx4j8ww/viewform" class="btn" target="_blank" rel="noopener">Open Consultation Form</a>
+    </section>
   </main>
+  <footer>
+    © 2025 Adijat Adenaike – All rights reserved.
+  </footer>
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/06/13/16/20250613161248-0ESLZHHS.js"></script>
 </body>
 </html>
 
